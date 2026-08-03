@@ -2,20 +2,28 @@
 
 扫码入库、出库、营业额统计、库存管理、客户管理 — 支持20人云端协同
 
-## 🚀 一键部署后端
+## 🚀 一键部署（选一个）
 
-点击下方按钮，自动部署后端到 Render.com（免费）：
+### 方式一：Vercel（推荐，无需绑卡）
+
+点击下方按钮，用 GitHub 账号一键部署：
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/wan-shop/clothing-store-app&root-directory=server&build-command=npm%20install&install-command=npm%20install&start-command=node%20server.js)
+
+### 方式二：Render
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/wan-shop/clothing-store-app)
 
-部署后你会得到一个后端地址（如 `https://clothing-store-api-xxxx.onrender.com`），把它发给我，我帮你配置前端。
+---
 
-## 📱 前端访问
+## 📱 部署后
 
-部署完成后，打开 GitHub Pages 地址即可使用：
-```
-https://wan-shop.github.io/clothing-store-app/
-```
+1. 部署完成你会得到一个后端地址
+2. 把后端地址发给我，我帮你配置前端
+3. 打开 GitHub Pages 地址，20人即可共享使用：
+   ```
+   https://wan-shop.github.io/clothing-store-app/
+   ```
 
 ## 功能
 - 📷 扫码入库/出库（手机摄像头）
