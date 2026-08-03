@@ -1,34 +1,31 @@
-# 👕 服装店管理 App
+# 服装店管理系统
 
-扫码入库、出库、营业额统计、库存管理、客户管理 — 支持20人云端协同
+> 扫码入库、出库、营业额统计、库存管理、客户管理
+> 支持 20 人云端共享，数据实时同步
 
-## 🚀 一键部署（选一个）
+## 一键部署
 
-### 方式一：Vercel（推荐，无需绑卡）
+点击下面的按钮，30秒自动部署到 Vercel（免费，不需要信用卡）：
 
-点击下方按钮，用 GitHub 账号一键部署：
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwan-shop%2Fclothing-store-app&stores=%5B%7B%22type%22%3A%22kv%22%7D%5D&project-name=clothing-store&repository-name=clothing-store-app)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/wan-shop/clothing-store-app&root-directory=server&build-command=npm%20install&install-command=npm%20install&start-command=node%20server.js)
-
-### 方式二：Render
-
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/wan-shop/clothing-store-app)
-
----
-
-## 📱 部署后
-
-1. 部署完成你会得到一个后端地址
-2. 把后端地址发给我，我帮你配置前端
-3. 打开 GitHub Pages 地址，20人即可共享使用：
-   ```
-   https://wan-shop.github.io/clothing-store-app/
-   ```
+> 部署后会自动创建 Upstash Redis 数据库（免费 256MB），无需手动配置。
 
 ## 功能
-- 📷 扫码入库/出库（手机摄像头）
-- 💰 营业额统计（日/周/月报表）
-- 📦 库存管理（低库存预警）
-- 👥 客户管理（消费历史）
-- 🏷️ 预设分类：上衣/夏季/春秋/冬季/裤子/配饰
-- ☁️ 多人云端实时同步
+
+- 📱 扫码入库 / 出库（支持条形码扫描）
+- 💰 营业额统计 + 利润分析
+- 📦 库存管理 + 低库存预警
+- 👥 客户管理 + 消费记录
+- 📊 图表报表 + Excel 导出
+- ☁️ 云端数据共享（20人同时使用）
+- 📲 PWA 安装到手机主屏幕
+
+## 技术栈
+
+| 组件 | 技术 | 说明 |
+|------|------|------|
+| 前端 | PWA (Vanilla JS + Vite) | 可安装到手机主屏幕 |
+| API | Vercel Serverless Functions | 免费部署 |
+| 数据库 | Upstash Redis | 免费 256MB |
+| 部署 | Vercel | 免费，不需要信用卡 |
