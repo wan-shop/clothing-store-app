@@ -27,8 +27,16 @@ Store.init().then(() => {
   console.error('[启动] 数据初始化失败:', e.message);
 });
 
-// 静态文件（前端dist）
-const distPath = join(__dirname, '..', 'dist');
+// 静态文件（前端dist）— 智能查找 dist 目录
+// 尝试多个可能的路径：本地开发、Render部署、其他
+const possiblePaths = [
+  join(__dirname, '..', 'dist'),       // 本地: server/../dist
+  join(__dirname, 'dist'),              // Render: server/dist (如果Root Directory=server)
+  join(process.cwd(), 'dist'),         // 从工作目录查找
+  join(process.cwd(), 'server', '..', 'dist'), // 从根目录运行时
+];
+const distPath = possiblePaths.find((p) => existsSync(p)) || possiblePaths[0];
+console.log('[静态文件] dist路径:', distPath, '存在:', existsSync(distPath));
 app.use(express.static(distPath));
 
 // ===== API 路由 =====
