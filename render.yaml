@@ -1,9 +1,15 @@
 services:
   - type: web
-    name: clothing-store-api
+    name: clothing-store-app
     env: node
-    rootDir: server
-    buildCommand: npm install
-    startCommand: node server.js
-    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: node server/server.js
+    envVars:
+      - key: GITHUB_TOKEN
+        sync: false
+      - key: GITHUB_REPO
+        value: wan-shop/clothing-store-app
+      - key: GITHUB_BRANCH
+        value: main
     healthCheckPath: /api/health
+    autoDeploy: true
