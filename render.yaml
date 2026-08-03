@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: clothing-store-api
+    env: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: node server.js
+    plan: free
+    healthCheckPath: /api/health
